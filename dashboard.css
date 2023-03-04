@@ -7,10 +7,22 @@
 }
 
 body {
-   height: 100vh;
-   background: rgb(0,0,0);
-   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, #002c59 100%);  
-   background-repeat: no-repeat;
+   background: linear-gradient(-45deg, #000000, #249cc8);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /* Navigation Bar Design */
@@ -40,8 +52,8 @@ body {
 }
 
 .navigation .nav-contents > ul > li:hover {
-   border: 1px solid #009ae2;
-   background: #009ae2;
+   border: 1px solid #4b0088;
+   background: #4b0088;
    color: #fff;
 }
 
@@ -56,10 +68,13 @@ body {
 .container {
    height: 80vh;
    width: 90%;
-   background: rgba(255, 255, 255, 0.377);
+   background: rgba(255, 255, 255, 0.150);
+   border-radius: 10px;
+   box-shadow: inset 0px 1px 8px rgba(255, 255, 255, 0.733);
    display: flex;
    align-items: center;
    flex-direction: column;
+   transition: .1s all ease-in-out;
 }
 
 .container .searchBar {
@@ -79,17 +94,31 @@ body {
    margin-left: 2em;
 }
 
-.container .searchBar > span{
+.container .searchBar > input:focus {
+   outline: none;
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.container .searchBar > input:hover {
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.container .searchBar > span {
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 10px 15px;
-   background: #fff;
+   background: #4b0088;
+   color: #fff;
    border-radius: 5px;
    font-size: 1.5em;
    margin-left: 1em;
    border: none;
    cursor: pointer;
+}
+
+.container .searchBar > span:hover {
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .container .boards {
@@ -99,18 +128,35 @@ body {
    width: 90%;
    overflow-x: hidden;
    overflow-y: scroll;
+   border-radius: 10px;
+}
+
+.container .boards::-webkit-scrollbar {
+   width: 10px;
+}
+
+.container .boards::-webkit-scrollbar-track {
+   background: #adadad;
+   border-radius: 0px 10px 10px 0px;
+}
+
+.container .boards::-webkit-scrollbar-thumb {
+   background: #4b0088;
+   border-radius: 0px 10px 10px 0px;
 }
 
 table {
    width: 100%;
    position: relative;
    border-collapse: collapse;
+   color: #fff;
 }
 
 th {
    position: sticky;
    top: 0;
-   background: #002c59;
+   background: #cacaca;
+   color: #000;
    z-index: 1;
    padding: 10px;
    text-align: left;
