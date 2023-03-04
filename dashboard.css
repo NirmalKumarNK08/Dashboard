@@ -68,9 +68,9 @@ body {
 .container {
    height: 80vh;
    width: 90%;
-   background: rgba(255, 255, 255, 0.150);
+   background: rgb(255, 255, 255);
    border-radius: 10px;
-   box-shadow: inset 0px 1px 8px rgba(255, 255, 255, 0.733);
+   box-shadow: 0px 5px 25px rgb(0, 0, 0);
    display: flex;
    align-items: center;
    flex-direction: column;
@@ -89,9 +89,12 @@ body {
    width: 20em;
    align-items: center;
    font-size: 1em;
-   border-radius: 5px;
-   border: none;
-   margin-left: 2em;
+   border: 1px solid #000;
+   margin-left: 5px;
+}
+
+#origin {
+   border-radius: 25px 0px 0px 25px;
 }
 
 .container .searchBar > input:focus {
@@ -107,18 +110,18 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 10px 15px;
+   padding: 12px 15px;
    background: #4b0088;
    color: #fff;
-   border-radius: 5px;
+   border-radius: 0px 25px 25px 0px;
    font-size: 1.5em;
-   margin-left: 1em;
+   margin-left: 5px;
    border: none;
    cursor: pointer;
 }
 
 .container .searchBar > span:hover {
-   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.671);
 }
 
 .container .boards {
@@ -136,7 +139,7 @@ body {
 }
 
 .container .boards::-webkit-scrollbar-track {
-   background: #adadad;
+   background: #adadad69;
    border-radius: 0px 10px 10px 0px;
 }
 
@@ -149,14 +152,14 @@ table {
    width: 100%;
    position: relative;
    border-collapse: collapse;
-   color: #fff;
+   color: #000;
 }
 
 th {
    position: sticky;
    top: 0;
-   background: #cacaca;
-   color: #000;
+   background: #4b0088;
+   color: #fff;
    z-index: 1;
    padding: 10px;
    text-align: left;
