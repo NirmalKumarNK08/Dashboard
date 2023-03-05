@@ -25,18 +25,6 @@ body {
    border-radius: 5px;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 /* Navigation Bar Design */
 .navigation {
    display: flex;
@@ -69,27 +57,11 @@ body {
    color: #fff;
 }
 
-/* Dashboard Section Design*/
-.dashboardSection {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   padding: 20px 0;
-   /* background: rgb(73,220,255);
-   background: linear-gradient(204deg, rgba(73,220,255,1) 0%, rgba(161,4,232,1) 89%); */
-   background-image: url(./images/airport-cloud-plane-airplane.jpg);
-   /* background-repeat: no-repeat; */
-   background-size: cover;
-   height: 100vh;
-   box-shadow: -1px -40px 30px rgba(0, 0, 0, 0.6);
-}
-
+/* MainScreen Section Design */
 .mainScreen {
    padding: 20px;
    display: flex;
    flex-direction: column;
-   /* border-bottom: 1px solid #000; */
 }
 
 .space {
@@ -172,8 +144,6 @@ body {
    height: 58vh;
    margin-left: 23.4em;
    width: 5%;
-   /* border-bottom-left-radius: 100%;
-   border-bottom-right-radius: 100%; */
    z-index: -1;
 }
 
@@ -207,19 +177,15 @@ body {
    0% {
       transform: translateY(0px);
    }
-
    25% {
       transform: translateY(2px);
    }
-
    50% {
       transform: translateY(4px);
    }
-
    75% {
       transform: translateY(2px);
    }
-
    100% {
       transform: translateY(0px);
    }
@@ -229,19 +195,15 @@ body {
    0% {
       transform: translateY(0px);
    }
-
    25% {
       transform: translateY(-4px);
    }
-
    50% {
       transform: translateY(0px);
    }
-
    75% {
       transform: translateY(4px);
    }
-
    100% {
       transform: translateY(0px);
    }
@@ -251,19 +213,15 @@ body {
    0% {
       transform: translateY(0px);
    }
-
    25% {
       transform: translateY(4px);
    }
-
    50% {
       transform: translateY(0px);
    }
-
    75% {
       transform: translateY(-6px);
    }
-
    100% {
       transform: translateY(0px);
    }
@@ -273,19 +231,15 @@ body {
    0% {
       transform: translateY(0px);
    }
-
    25% {
       transform: translateY(-4px);
    }
-
    50% {
       transform: translateY(0px);
    }
-
    75% {
       transform: translateY(-6px);
    }
-
    100% {
       transform: translateY(0px);
    }
@@ -328,6 +282,19 @@ body {
    /* z-index: -1; */
 }
 
+/* Dashboard Section Design*/
+.dashboardSection {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   padding: 20px 0;
+   background-image: url(./images/airport-cloud-plane-airplane.jpg);
+   background-size: cover;
+   height: 100vh;
+   box-shadow: -1px -40px 30px rgba(0, 0, 0, 0.6);
+}
+
 .container {
    height: 90vh;
    width: 90%;
@@ -340,33 +307,24 @@ body {
    transition: .1s all ease-in-out;
 }
 
-.bgdesign {
-   position: absolute;
-   /* bottom: -30em; */
-   height: 30vh;
-   width: 10%;
-   background: #249cc8;
-   left: 5%;
-   border-top-right-radius: 100%;
-   border-bottom-right-radius: 100%;
-   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
-}
-
-.bgdesign1 {
-   position: absolute;
-   bottom: -44.15em;
-   height: 30vh;
-   width: 10%;
-   background: #249cc8;
-   right: 5%;
-   border-top-left-radius: 300%;
-   border-bottom-left-radius: 100%;
-   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
-}
-
 .container > h1 {
    margin: 20px;
    font-size: 2em;
+}
+
+.container > a {
+   position: absolute;
+   padding: 30px 15px 0 0;
+   right: 4em;
+   font-size: 18px;
+   color: #000;
+   text-decoration: none;
+   font-weight: 800;
+   transition: .2s all ease;
+}
+
+.container > a:hover {
+   text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.6);
 }
 
 .container .searchBar {
