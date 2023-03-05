@@ -76,9 +76,11 @@ body {
    justify-content: center;
    width: 100%;
    padding: 20px 0;
-   background: linear-gradient(-45deg, #fa00fa, #249cc8, #00ff88);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+   /* background: rgb(73,220,255);
+   background: linear-gradient(204deg, rgba(73,220,255,1) 0%, rgba(161,4,232,1) 89%); */
+   background-image: url(./images/airport-cloud-plane-airplane.jpg);
+   /* background-repeat: no-repeat; */
+   background-size: cover;
    height: 100vh;
    box-shadow: -1px -40px 30px rgba(0, 0, 0, 0.6);
 }
@@ -329,13 +331,37 @@ body {
 .container {
    height: 90vh;
    width: 90%;
-   background: rgb(255, 255, 255);
+   background: rgba(255, 255, 255, 0.719);
    border-radius: 10px;
    box-shadow: 0px 5px 25px rgb(0, 0, 0);
    display: flex;
    align-items: center;
    flex-direction: column;
    transition: .1s all ease-in-out;
+}
+
+.bgdesign {
+   position: absolute;
+   /* bottom: -30em; */
+   height: 30vh;
+   width: 10%;
+   background: #249cc8;
+   left: 5%;
+   border-top-right-radius: 100%;
+   border-bottom-right-radius: 100%;
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.bgdesign1 {
+   position: absolute;
+   bottom: -44.15em;
+   height: 30vh;
+   width: 10%;
+   background: #249cc8;
+   right: 5%;
+   border-top-left-radius: 300%;
+   border-bottom-left-radius: 100%;
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .container > h1 {
@@ -398,6 +424,7 @@ body {
    overflow-x: hidden;
    overflow-y: scroll;
    border-radius: 10px;
+   z-index: 1;
 }
 
 .container .boards::-webkit-scrollbar {
@@ -408,6 +435,7 @@ body {
    background: #adadad69;
    border-radius: 0px 10px 10px 0px;
    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.774);
+
 }
 
 .container .boards::-webkit-scrollbar-thumb {
@@ -420,22 +448,23 @@ table {
    position: relative;
    border-collapse: collapse;
    color: #000;
+   background: rgba(255, 255, 255, 0);
 }
 
 th {
    position: sticky;
    top: 0;
-   background: #383838;
+   background: #000000;
    color: #fff;
    z-index: 1;
    padding: 10px;
    text-align: left;
-   border-left: 1px solid #000;
 }
 
 td {
-   border: 1px solid #000;
+   border-bottom: 1px solid #000;
    text-align: left;
+   color: rgb(0, 0, 0);
    padding: 10px;
 }
 
