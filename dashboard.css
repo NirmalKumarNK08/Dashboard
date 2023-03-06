@@ -385,6 +385,80 @@ body {
    margin-left: 5px;
 }
 
+ul {
+   z-index: 1;
+   overflow-y: scroll;
+   color: #000;
+}
+
+ul > li {
+   padding: 10px 15px;
+   border-bottom: 1px solid #000;
+   cursor: pointer;
+}
+
+li:hover {
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+ul::-webkit-scrollbar {
+   width: 10px;
+}
+ul::-webkit-scrollbar-track {
+   background: #adadad69;
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.774);
+
+}
+ul::-webkit-scrollbar-thumb {
+   background: #000000;
+   border-radius: 5px;
+}
+
+#charactersList, #charactersList1, #charactersList2 {
+   position: absolute;
+   max-height: 35vh;
+   /* min-height: auto; */
+   background: #fff;
+   z-index: 1;
+}
+
+#charactersList {
+   top: 139%;
+   left: 19em;
+   width: 21.5em;
+   border-radius: 25px 0 0 25px;
+}
+
+#charactersList1 {
+   top: 139%;
+   right: 22.5em;
+   width: 21.42em;
+}
+
+#charactersList2 {
+   top: 139%;
+   left: 30em;
+   width: 21.4em;
+   border-radius: 25px 0 0 25px;
+}
+
+.character {
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+#charactersList.active {
+   display: none;
+}
+#charactersList1.active {
+   display: none;
+}
+#charactersList2.active {
+   display: none;
+}
+
 #origin {
    border-radius: 25px 0px 0px 25px;
 }
@@ -428,7 +502,6 @@ body {
    overflow-x: hidden;
    overflow-y: scroll;
    border-radius: 10px;
-   z-index: 1;
 }
 
 .container .boards::-webkit-scrollbar {
@@ -483,7 +556,6 @@ body {
    height: 60vh;
    width: 100%;
    border-radius: 10px;
-   z-index: 1;
 }
 
 .dep {
@@ -520,7 +592,6 @@ th {
    top: 0;
    background: #000000;
    color: #fff;
-   z-index: 1;
    padding: 10px;
    text-align: left;
 }
@@ -530,6 +601,7 @@ td {
    text-align: left;
    color: rgb(0, 0, 0);
    padding: 10px;
+   z-index: -1;
 }
 
 

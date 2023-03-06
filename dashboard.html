@@ -57,21 +57,33 @@
 
          <div class="searchBar" id="searchBar">
             <input type="text" id="origin" placeholder="Origin">
+            <ul class="active" id="charactersList">
+               <li>asdf</li>
+            </ul>
+
             <input type="text" id="destination" placeholder="Destination">
+            <ul class="active" id="charactersList1">
+               <li>asdf</li>
+            </ul>
+
             <span><ion-icon name="paper-plane-outline"></ion-icon></span>
          </div>
 
          <div class="searchBar active" id="searchBar1">
             <input type="text" id="airport" placeholder="Airport">
             <span><ion-icon name="paper-plane-outline"></ion-icon></span>
+
+            <ul class="active" id="charactersList2">
+               <li>asdf</li>
+            </ul>
          </div>
 
          <div class="boards" id="boards">
             <table>
                <thead>
                   <tr>
+                     <th>AIRLINE</th>
                      <th>FLIGHT</th>
-                     <th>AIRCRAFT</th>
                      <th>STATUS</th>
                      <th>DEPARTURE</th>
                      <th>ARRIVAL</th>
@@ -175,11 +187,11 @@
             <div class="leftBoard">
                <table>
                   <thead>
+                     <th>AIRLINE</th>
                      <th>FLIGHT</th>
-                     <th>AIRCRAFT</th>
-                     <th>TO</th>
-                     <th>DEPART</th>
-                     <th>ARRIVE</th>
+                     <th>ORIGIN</th>
+                     <th>TIME</th>
+                     <th>STATUS</th>
                   </thead>
                   <tbody>
                      <tr>
@@ -253,11 +265,11 @@
             <div class="rightBoard">
                <table>
                   <thead>
+                     <th>AIRLINE</th>
                      <th>FLIGHT</th>
-                     <th>AIRCRAFT</th>
-                     <th>FROM</th>
-                     <th>DEPART</th>
-                     <th>ARRIVE</th>
+                     <th>DESTINATION</th>
+                     <th>TIME</th>
+                     <th>STATUS</th>
                   </thead>
                   <tbody>
                      <tr>
