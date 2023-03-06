@@ -50,12 +50,22 @@
    <section class="dashboardSection" id="dashboard">
       <div class="container">
          <h1 id="title"><u>Flight Schedules</u></h1>
-         <a id="toggle" href="#dashboard">Airport Schedules ▸ </a>
+         <h1 id="title1" class="active"><u>Airport Schedules</u></h1>
+
+         <a id="toggle" href="#dashboard"> <u>Airport Schedules</u> ▶ </a>
+         <a id="toggle1" class="active" href="#dashboard"> ◀  <u>Flight Schedules</u> </a>
+
          <div class="searchBar" id="searchBar">
             <input type="text" id="origin" placeholder="Origin">
             <input type="text" id="destination" placeholder="Destination">
             <span><ion-icon name="paper-plane-outline"></ion-icon></span>
          </div>
+
+         <div class="searchBar active" id="searchBar1">
+            <input type="text" id="airport" placeholder="Airport">
+            <span><ion-icon name="paper-plane-outline"></ion-icon></span>
+         </div>
+
          <div class="boards" id="boards">
             <table>
                <thead>
@@ -159,6 +169,163 @@
                   </tr>
                </tbody>
             </table>
+         </div>
+         <div class="boards1 active" id="boards1">
+            <h3 class="dep">Departure</h3>
+            <div class="leftBoard">
+               <table>
+                  <thead>
+                     <th>FLIGHT</th>
+                     <th>AIRCRAFT</th>
+                     <th>TO</th>
+                     <th>DEPART</th>
+                     <th>ARRIVE</th>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                     <tr>
+                        <td>Indigo</td>
+                        <td>AB123</td>
+                        <td>DEL</td>
+                        <td>00:00</td>
+                        <td>24:00</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         
+            <h3 class="arr">Arrival</h3>
+            <div class="rightBoard">
+               <table>
+                  <thead>
+                     <th>FLIGHT</th>
+                     <th>AIRCRAFT</th>
+                     <th>FROM</th>
+                     <th>DEPART</th>
+                     <th>ARRIVE</th>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                     <tr>
+                        <td>SpiceJet</td>
+                        <td>AB123</td>
+                        <td>VOMM</td>
+                        <td>24:00</td>
+                        <td>00:00</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
          </div>
       </div>
    </section>

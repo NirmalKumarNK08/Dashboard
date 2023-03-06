@@ -304,15 +304,46 @@ body {
    display: flex;
    align-items: center;
    flex-direction: column;
-   transition: .1s all ease-in-out;
+   transition: .5s all ease-in-out;
 }
 
 .container > h1 {
    margin: 20px;
    font-size: 2em;
+   transition: .5s all ease-in-out;
 }
 
-.container > a {
+#title.active {
+   display: none;
+}
+#title1.active {
+   display: none;
+
+}
+
+#toggle.active {
+   display: none;
+}
+#toggle1.active {
+   display: none;
+}
+
+#searchBar.active {
+   display: none;
+}
+#searchBar1.active {
+   display: none;
+}
+
+#boards.active {
+   display: none;
+}
+#boards1.active {
+   display: none;
+}
+
+
+.container > #toggle {
    position: absolute;
    padding: 30px 15px 0 0;
    right: 4em;
@@ -320,10 +351,21 @@ body {
    color: #000;
    text-decoration: none;
    font-weight: 800;
-   transition: .2s all ease;
+}
+.container > #toggle1 {
+   position: absolute;
+   padding: 30px 15px 0 0;
+   left: 5em;
+   font-size: 18px;
+   color: #000;
+   text-decoration: none;
+   font-weight: 800;
 }
 
-.container > a:hover {
+.container > #toggle:hover {
+   text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.6);
+}
+.container > #toggle1:hover {
    text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -344,6 +386,10 @@ body {
 }
 
 #origin {
+   border-radius: 25px 0px 0px 25px;
+}
+
+#airport {
    border-radius: 25px 0px 0px 25px;
 }
 
@@ -399,6 +445,66 @@ body {
 .container .boards::-webkit-scrollbar-thumb {
    background: #000000;
    border-radius: 0px 10px 10px 0px;
+}
+.container .leftBoard::-webkit-scrollbar {
+   width: 10px;
+}
+
+.container .leftBoard::-webkit-scrollbar-track {
+   background: #adadad69;
+   border-radius: 0px 10px 10px 0px;
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.774);
+
+}
+
+.container .leftBoard::-webkit-scrollbar-thumb {
+   background: #000000;
+   border-radius: 0px 10px 10px 0px;
+}
+.container .rightBoard::-webkit-scrollbar {
+   width: 10px;
+}
+
+.container .rightBoard::-webkit-scrollbar-track {
+   background: #adadad69;
+   border-radius: 0px 10px 10px 0px;
+   box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.774);
+
+}
+
+.container .rightBoard::-webkit-scrollbar-thumb {
+   background: #000000;
+   border-radius: 0px 10px 10px 0px;
+}
+
+.container .boards1 {
+   display: flex;
+   justify-content: space-between;
+   height: 60vh;
+   width: 100%;
+   border-radius: 10px;
+   z-index: 1;
+}
+
+.dep {
+   position: absolute;
+   top: 48.5em;
+   margin-left: 13em; 
+}
+.arr {
+   position: absolute;
+   top: 48.5em;
+   margin-left: 65%; 
+}
+
+.boards1 .leftBoard, .rightBoard {
+   display: flex;
+   border-radius: 10px;
+   height: 100%;
+   width: 50%;
+   margin: 10px 25px;
+   overflow-x: hidden;
+   overflow-y: scroll;
 }
 
 table {
