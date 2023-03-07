@@ -23,6 +23,8 @@ const org = document.getElementById("origin");
 const destination = document.getElementById("destination");
 const airport = document.getElementById("airport");
 
+const inputText = document.querySelectorAll("character");
+
 window.addEventListener('scroll', () => {
    let value = window.scrollY;
    flight.style.left = value + 'px';
@@ -66,7 +68,7 @@ org.addEventListener("keyup", (e) => {
   if (searchString != "") {
     charactersList.classList.remove("active");
   } else {
-    charactersList.classList.add("active");
+    charactersList.classList.add("active"); 
   }
 });
 
@@ -88,34 +90,35 @@ airport.addEventListener("keyup", (e) => {
   }
 });
 
-let hpCharacters = [];
-function suggession(e) {
-   const searchString = e.target.value.toLowerCase();
-   // console.log(searchString);
-   const filteredCharacters = hpCharacters.filter((character) => {
-     return (
-       character.name.toLowerCase().includes(searchString) ||
-       character.country.toLowerCase().includes(searchString) ||
-       character.city.toLowerCase().includes(searchString) ||
-       character.iata_code.toLowerCase().includes(searchString)
-     );
-   });
-   // console.log(filteredCharacters);
-   displayCharacters(filteredCharacters);
+function suggestions(e) {
+  const searchString = e.target.value.toLowerCase();
+  // console.log(searchString);
+  const filteredCharacters = hpCharacters.filter((character) => {
+    return (
+      character.name.toLowerCase().includes(searchString) ||
+      character.country.toLowerCase().includes(searchString) ||
+      character.city.toLowerCase().includes(searchString) ||
+      character.iata_code.toLowerCase().includes(searchString)
+    );
+  });
+  // console.log(filteredCharacters);
+  displayCharacters(filteredCharacters);
 }
+
+let hpCharacters = [];
 org.addEventListener("keyup", (e) => {
-  suggession(e);
+  suggestions(e);
 });
 destination.addEventListener("keyup", (e) => {
-  suggession(e);
+  suggestions(e);
 });
 airport.addEventListener("keyup", (e) => {
-  suggession(e);
+  suggestions(e);
 });
 
 const loadCharacters = async () => {
   try {
-    const res = await fetch("./Airport Codes/airports-code.json");
+    const res = await fetch("./Airport codes/airports-code.json");
     hpCharacters = await res.json();
     displayCharacters(hpCharacters);
     displayCharacters1(hpCharacters);
@@ -127,42 +130,34 @@ const loadCharacters = async () => {
 };
 
 const displayCharacters = (characters) => {
-  const htmlString = characters
-    .map((character) => {
+   const htmlString = characters.map((character) => {
       return `
          <li class="character">
             <h3><span>✈ </span>${character.name}</h3>
             <p class="code">${character.iata_code}</p>
          </li>`;
-    })
-    .join("");
-  charactersList.innerHTML = htmlString;
-};
-
+      }).join('');
+   charactersList.innerHTML = htmlString;
+}
 const displayCharacters1 = (characters) => {
-  const htmlString = characters
-    .map((character) => {
+   const htmlString = characters.map((character) => {
       return `
          <li class="character">
             <h3><span>✈ </span>${character.name}</h3>
             <p class="code">${character.iata_code}</p>
          </li>`;
-    })
-    .join("");
-  charactersList1.innerHTML = htmlString;
-};
+      }).join('');
+   charactersList1.innerHTML = htmlString;
+}
 const displayCharacters2 = (characters) => {
-  const htmlString = characters
-    .map((character) => {
+   const htmlString = characters.map((character) => {
       return `
          <li class="character">
             <h3><span>✈ </span>${character.name}</h3>
             <p class="code">${character.iata_code}</p>
          </li>`;
-    })
-    .join("");
-  charactersList2.innerHTML = htmlString;
-};
+      }).join('');
+   charactersList2.innerHTML = htmlString;
+}
 
 loadCharacters();
-

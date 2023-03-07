@@ -385,31 +385,31 @@ body {
    margin-left: 5px;
 }
 
-ul {
+.searchBar > ul {
    z-index: 1;
    overflow-y: scroll;
    color: #000;
 }
 
-ul > li {
+.searchBar > ul > li {
    padding: 10px 15px;
    border-bottom: 1px solid #000;
    cursor: pointer;
 }
 
-li:hover {
+.searchBar > ul li:hover {
    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-ul::-webkit-scrollbar {
+.searchBar > ul::-webkit-scrollbar {
    width: 10px;
 }
-ul::-webkit-scrollbar-track {
+.searchBar > ul::-webkit-scrollbar-track {
    background: #adadad69;
    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.774);
 
 }
-ul::-webkit-scrollbar-thumb {
+.searchBar > ul::-webkit-scrollbar-thumb {
    background: #000000;
    border-radius: 5px;
 }
