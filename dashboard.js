@@ -23,12 +23,14 @@ const org = document.getElementById("origin");
 const destination = document.getElementById("destination");
 const airport = document.getElementById("airport");
 
+//Based upon the scrolling value the plane moves up.
 window.addEventListener('scroll', () => {
    let value = window.scrollY;
    flight.style.left = value + 'px';
    flight.style.bottom = value + 'px';
 })
 
+//To hide the flightSchedule contents
 airportSchedule.addEventListener('click', () => {
    dashboard.classList.add('active');
 
@@ -45,6 +47,7 @@ airportSchedule.addEventListener('click', () => {
    flightSchedule.classList.remove("active");
 })
 
+//To hide the airportSchedule contents
 flightSchedule.addEventListener('click', () => {
    dashboard.classList.remove("active");
 
@@ -61,6 +64,7 @@ flightSchedule.addEventListener('click', () => {
    flightSchedule.classList.add("active");
 })
 
+//To hide the suggessions bar when the input box is empty of cleared
 org.addEventListener("keyup", (e) => {
   const searchString = e.target.value;
   if (searchString != "") {
@@ -88,95 +92,109 @@ airport.addEventListener("keyup", (e) => {
   }
 });
 
-let filteredCharacters;
-function suggestions(e) {
-  const searchString = e.target.value.toLowerCase();
-  // console.log(searchString);
-  filteredCharacters = hpCharacters.filter((character) => {
-    return (
-      character.name.toLowerCase().includes(searchString) ||
-      character.country.toLowerCase().includes(searchString) ||
-      character.city.toLowerCase().includes(searchString) ||
-      character.iata_code.toLowerCase().includes(searchString)
+$(document).ready(function () {
+  $.ajaxSetup({ cache: false });
+  $("#origin").keyup(function () {
+    $("#charactersList").html("");
+    var searchField = $("#origin").val();
+    var expression = new RegExp(searchField, "i");
+    $.getJSON(
+      "https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json",
+      function (data) {
+        $.each(data, function (key, value) {
+          if (
+            value.name.search(expression) != -1 ||
+            value.iata_code.search(expression) != -1
+          ) {
+            $("#charactersList").append(
+              '<li class="list-group-item characters">' +
+                "<h4>" +
+                value.name +
+                "</h4>" +
+                '    <span class="text-muted">' +
+                value.iata_code +
+                "</span></li>"
+            );
+          }
+        });
+      }
     );
   });
-  // console.log(filteredCharacters);
-}
 
-let hpCharacters = [];
-org.addEventListener("keyup", (e) => {
-  suggestions(e);
-  displayCharacters(filteredCharacters);
+  $("#charactersList").on("click", "li", function () {
+    var click_text = $(this).text().split("    ");
+    $("#origin").val($.trim(click_text[1]));
+    $("#charactersList").html("");
+  });
 });
 
-destination.addEventListener("keyup", (e) => {
-  suggestions(e);
-  displayCharacters1(filteredCharacters);
-});
-
-airport.addEventListener("keyup", (e) => {
-  suggestions(e);
-  displayCharacters2(filteredCharacters);
-});
-
-const loadCharacters = async () => {
-  try {
-    const res = await fetch(
-      "https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json"
+$(document).ready(function () {
+  $.ajaxSetup({ cache: false });
+  $("#destination").keyup(function () {
+    $("#charactersList1").html("");
+    var searchField = $("#destination").val();
+    var expression = new RegExp(searchField, "i");
+    $.getJSON(
+      "https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json",
+      function (data) {
+        $.each(data, function (key, value) {
+          if (
+            value.name.search(expression) != -1 ||
+            value.iata_code.search(expression) != -1
+          ) {
+            $("#charactersList1").append(
+              '<li class="list-group-item characters">' +
+                "<h3>" +
+                value.name +
+                "</h3>" +
+                '     <span class="text-muted">' +
+                value.iata_code +
+                "</span></li>"
+            );
+          }
+        });
+      }
     );
-    hpCharacters = await res.json();
-    
-    displayCharacters(hpCharacters);
-    displayCharacters1(hpCharacters);
-    displayCharacters2(hpCharacters);
-    // console.log(hpCharacters);
-  } catch (err) {
-    console.log(err);
-  }
-};
+  });
 
-const displayCharacters = (characters) => {
-   const htmlString = characters.map((character) => {
-      return `
-         <li onclick="originFunc()" class="character">
-            <h3><span>✈ </span>${character.name}</h3>
-            <p id="passingValue" class="code">${character.iata_code}</p>
-         </li>`;
-      }).join('');
-   charactersList.innerHTML = htmlString;
-}
-const displayCharacters1 = (characters) => {
-   const htmlString = characters.map((character) => {
-      return `
-         <li onclick="destinationFunc()" class="character">
-            <h3><span>✈ </span>${character.name}</h3>
-            <p id="passingValue1" class="code">${character.iata_code}</p>
-         </li>`;
-      }).join('');
-   charactersList1.innerHTML = htmlString;
-}
-const displayCharacters2 = (characters) => {
-   const htmlString = characters.map((character) => {
-      return `
-         <li onclick="airportFunc()" class="character">
-            <h3><span>✈ </span>${character.name}</h3>
-            <p id="passingValue2" class="code">${character.iata_code}</p>
-         </li>`;
-      }).join('');
-   charactersList2.innerHTML = htmlString;
-}
+  $("#charactersList1").on("click", "li", function () {
+    var click_text = $(this).text().split("     ");
+    $("#destination").val($.trim(click_text[1]));
+    $("#charactersList1").html("");
+  });
+});
 
-function originFunc() {
-  org.value = document.getElementById("passingValue").innerText;
-  charactersList.classList.add("active");
-}
-function destinationFunc() {
-  destination.value = document.getElementById("passingValue1").innerText;
-  charactersList1.classList.add("active");
-}
-function airportFunc() {
-  airport.value = document.getElementById("passingValue2").innerText;
-  charactersList2.classList.add("active");
-}
+$(document).ready(function () {
+  $.ajaxSetup({ cache: false });
+  $("#airport").keyup(function () {
+    $("#charactersList2").html("");
+    //  $("#state").val("");
+    var searchField = $("#airport").val();
+    var expression = new RegExp(searchField, "i");
+    $.getJSON(
+      "https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json",
+      function (data) {
+        $.each(data, function (key, value) {
+          if (
+            value.name.search(expression) != -1 ||
+            value.iata_code.search(expression) != -1
+          ) {
+            $("#charactersList2").append(
+              '<li class="list-group-item characters">' + '<h3>' +
+                value.name + '</h3>' +
+                '     <span class="text-muted">' +
+                value.iata_code +
+                "</span></li>"
+            );
+          }
+        });
+      }
+    );
+  });
 
-loadCharacters();
+  $("#charactersList2").on("click", "li", function () {
+    var click_text = $(this).text().split("     ");
+    $("#airport").val($.trim(click_text[1]));
+    $("#charactersList2").html("");
+  });
+});

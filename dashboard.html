@@ -4,6 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="dashboard.css">
    <title>Dashboard</title>
 </head>
@@ -24,8 +26,7 @@
             <ul>
                <li>Home</li>
                <li>Map</li>
-               <li>Dashboard</li>
-               <li>Navigate</li>
+               <li>Schedules</li>
                <li>About</li>
             </ul>
          </div>
@@ -34,8 +35,6 @@
 
    <!-- Body content -->
    <section class="mainScreen">
-      <!-- <h1>Hello</h1> -->
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil doloremque neque repudiandae vitae ullam corrupti deleniti ad inventore aspernatur eum odio debitis, similique accusantium ab sit ex amet libero cumque. Fuga impedit voluptates quaerat beatae laborum doloribus vel eos deleniti neque, nam at quas nobis praesentium unde obcaecati fugiat explicabo facilis maiores molestiae quibusdam quis numquam dolorem! Rerum, quod est ipsam placeat eveniet quibusdam at, voluptas amet autem soluta maxime saepe atque nostrum excepturi sapiente expedita nobis veniam temporibus. Non necessitatibus nostrum hic, modi illo dolorem cum, esse nisi voluptatibus unde ut. Nemo, eius in, consequatur eum voluptas nobis explicabo perferendis distinctio officia quo placeat eveniet temporibus, quidem dolore! Facere magnam atque incidunt nulla, architecto illo repudiandae culpa, adipisci alias asperiores dignissimos qui ea. Esse, quia dolor saepe, explicabo repellat temporibus ea laboriosam consequatur nesciunt nostrum aliquid, error eos laborum molestias libero aliquam recusandae in facilis aspernatur a doloribus! Quam commodi, odio vel alias magnam quaerat quo similique facere voluptatum veniam in nisi illo earum id optio exercitationem vitae blanditiis dolores beatae cum esse. Laudantium optio commodi omnis pariatur quo dolorum odio rem itaque quae. Laboriosam eligendi dolor ratione culpa magni expedita quod aspernatur asperiores adipisci beatae quam a ad, maiores recusandae fugit debitis, blanditiis assumenda amet neque. Sapiente nostrum atque sunt ullam magnam, natus illo autem? Autem tempore quo quaerat exercitationem quibusdam optio ad reprehenderit eligendi, vel mollitia neque commodi deleniti, suscipit quam magnam incidunt tempora quas itaque sint. Numquam laborum doloribus consequatur atque, ipsum est enim a quis fugit accusamus itaque necessitatibus quidem! Voluptatum cupiditate aliquid dolorem iure eum facilis laudantium cumque quo non voluptatem ipsam delectus, quod commodi, beatae rem blanditiis optio doloremque! Sit, quos aut quae necessitatibus laborum nisi maiores delectus voluptate odio nulla tempora provident, aliquam ipsa vel, culpa sunt? Impedit in perferendis accusantium dignissimos repudiandae qui laborum hic ullam fugit quibusdam dolorum, molestiae, fuga error eos et veritatis quasi ratione dolor reiciendis quod voluptate nesciunt a unde! Fugiat porro nam molestiae perferendis, dignissimos dolore eligendi possimus asperiores voluptatem cumque vero! Odio quis iusto vel nostrum dolorum debitis laboriosam earum mollitia consectetur magni quas cumque, dolores architecto? Fugit cumque hic pariatur aliquid similique temporibus a, culpa qui tempora dolor dolorem ducimus autem quasi odit voluptatum ipsum placeat? Sunt amet consequuntur, eum beatae tenetur quia quae eos perspiciatis suscipit nemo quidem illo, dolore tempore quaerat quis praesentium voluptatum voluptatibus, incidunt qui velit! Quaerat, doloremque quod?</p> -->
       <div class="space">
          <div class="spaceContent">
             <h1>Know The</h1>
@@ -61,12 +60,12 @@
             <div class="searchBar" id="searchBar">
                <div class="originContainer">
                   <input type="text" name="origin" id="origin" placeholder="Origin" autocomplete="off">
-                  <ul class="active" id="charactersList"></ul>
+                  <ul id="charactersList"></ul>
                </div>
                
                <div class="destinationContainer">
                   <input type="text" name="destination" id="destination" placeholder="Destination" autocomplete="off">
-                  <ul class="active" id="charactersList1"></ul>
+                  <ul id="charactersList1"></ul>
                </div>
                <span><button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button></span>
             </div>
@@ -75,7 +74,7 @@
             <div class="searchBar active" id="searchBar1">
                <div class="airportContainer">
                   <input type="text" name="airport" id="airport" placeholder="Airport" autocomplete="off">
-                  <ul class="active" id="charactersList2"></ul>
+                  <ul id="charactersList2"></ul>
                </div>
                <span><button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button></span>
             </div>
