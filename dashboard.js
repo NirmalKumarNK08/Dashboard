@@ -123,7 +123,9 @@ airport.addEventListener("keyup", (e) => {
 
 const loadCharacters = async () => {
   try {
-    const res = await fetch("./Airport codes/airports-code.json");
+    const res = await fetch(
+      "https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json"
+    );
     hpCharacters = await res.json();
     displayCharacters(hpCharacters);
     displayCharacters1(hpCharacters);
