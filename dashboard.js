@@ -23,8 +23,6 @@ const org = document.getElementById("origin");
 const destination = document.getElementById("destination");
 const airport = document.getElementById("airport");
 
-const inputText = document.querySelectorAll("character");
-
 window.addEventListener('scroll', () => {
    let value = window.scrollY;
    flight.style.left = value + 'px';
@@ -127,6 +125,7 @@ const loadCharacters = async () => {
       "https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json"
     );
     hpCharacters = await res.json();
+    
     displayCharacters(hpCharacters);
     displayCharacters1(hpCharacters);
     displayCharacters2(hpCharacters);
@@ -139,9 +138,9 @@ const loadCharacters = async () => {
 const displayCharacters = (characters) => {
    const htmlString = characters.map((character) => {
       return `
-         <li class="character">
+         <li onclick="originFunc()" class="character">
             <h3><span>✈ </span>${character.name}</h3>
-            <p class="code">${character.iata_code}</p>
+            <p id="passingValue" class="code">${character.iata_code}</p>
          </li>`;
       }).join('');
    charactersList.innerHTML = htmlString;
@@ -149,9 +148,9 @@ const displayCharacters = (characters) => {
 const displayCharacters1 = (characters) => {
    const htmlString = characters.map((character) => {
       return `
-         <li class="character">
+         <li onclick="destinationFunc()" class="character">
             <h3><span>✈ </span>${character.name}</h3>
-            <p class="code">${character.iata_code}</p>
+            <p id="passingValue1" class="code">${character.iata_code}</p>
          </li>`;
       }).join('');
    charactersList1.innerHTML = htmlString;
@@ -159,12 +158,25 @@ const displayCharacters1 = (characters) => {
 const displayCharacters2 = (characters) => {
    const htmlString = characters.map((character) => {
       return `
-         <li class="character">
+         <li onclick="airportFunc()" class="character">
             <h3><span>✈ </span>${character.name}</h3>
-            <p class="code">${character.iata_code}</p>
+            <p id="passingValue2" class="code">${character.iata_code}</p>
          </li>`;
       }).join('');
    charactersList2.innerHTML = htmlString;
+}
+
+function originFunc() {
+  org.value = document.getElementById("passingValue").innerText;
+  charactersList.classList.add("active");
+}
+function destinationFunc() {
+  destination.value = document.getElementById("passingValue1").innerText;
+  charactersList1.classList.add("active");
+}
+function airportFunc() {
+  airport.value = document.getElementById("passingValue2").innerText;
+  charactersList2.classList.add("active");
 }
 
 loadCharacters();

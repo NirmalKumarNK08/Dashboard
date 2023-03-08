@@ -386,11 +386,12 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin: 0 30px 30px 30px;
+   margin: 0 30px 15px 30px;
 }
 
 .container .searchBar .originContainer > input, .destinationContainer > input, .airportContainer > input {
    padding: 10px 0 10px 15px;
+   font-weight: bold;
    width: 20em;
    align-items: center;
    font-size: 1em;
@@ -504,7 +505,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 12px 15px;
+   padding: 12px 12px;
    background: #000000;
    color: #fff;
    border-radius: 0px 25px 25px 0px;
@@ -512,6 +513,17 @@ body {
    margin-left: 5px;
    border: none;
    cursor: pointer;
+}
+
+.container .searchBar > span > button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: transparent;
+   color: #fff;
+   font-size: 1em;
+   cursor: pointer;
+   border: none;
 }
 
 .container .searchBar > span:hover {
@@ -576,14 +588,16 @@ body {
 
 .container .boards1 {
    display: flex;
-   flex-direction: column;
    justify-content: space-between;
-   height: 60vh;
+   flex-direction: column;
+   height: 55vh;
    width: 100%;
    border-radius: 10px;
 }
 
 .boardHeading {
+   margin: 10px;
+   height: 28px;
    display: flex;
    justify-content: space-around;
 }
@@ -596,9 +610,9 @@ body {
 .boardContainer .leftBoard, .rightBoard {
    display: flex;
    border-radius: 10px;
-   height: 50vh;
+   height: 55vh;
    width: 50%;
-   margin: 10px 25px;
+   margin: 0px 25px;
    overflow-x: hidden;
    overflow-y: scroll;
    
@@ -628,3 +642,4 @@ td {
    padding: 10px;
    z-index: -1;
 }
+
