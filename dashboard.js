@@ -90,10 +90,11 @@ airport.addEventListener("keyup", (e) => {
   }
 });
 
+let filteredCharacters;
 function suggestions(e) {
   const searchString = e.target.value.toLowerCase();
   // console.log(searchString);
-  const filteredCharacters = hpCharacters.filter((character) => {
+  filteredCharacters = hpCharacters.filter((character) => {
     return (
       character.name.toLowerCase().includes(searchString) ||
       character.country.toLowerCase().includes(searchString) ||
@@ -102,20 +103,22 @@ function suggestions(e) {
     );
   });
   // console.log(filteredCharacters);
-  displayCharacters(filteredCharacters);
-  displayCharacters1(filteredCharacters);
-  displayCharacters2(filteredCharacters);
 }
 
 let hpCharacters = [];
 org.addEventListener("keyup", (e) => {
   suggestions(e);
+  displayCharacters(filteredCharacters);
 });
+
 destination.addEventListener("keyup", (e) => {
   suggestions(e);
+  displayCharacters1(filteredCharacters);
 });
+
 airport.addEventListener("keyup", (e) => {
   suggestions(e);
+  displayCharacters2(filteredCharacters);
 });
 
 const loadCharacters = async () => {
