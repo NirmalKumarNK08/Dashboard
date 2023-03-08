@@ -56,32 +56,25 @@
          <a id="toggle1" class="active" href="#dashboard"> ◀  <u>Flight Schedules</u> </a>
 
          <div class="searchBar" id="searchBar">
-            <input type="text" id="origin" placeholder="Origin">
-            <ul class="active" id="charactersList">
-               <li>asdf</li>
-               <li>asdf</li>
-               <li>asdf</li>
-               <li>asdf</li>
-               <li>asdf</li>
-               <li>asdf</li>
-               <li>asdf</li>
-               <li>asdf</li>
-            </ul>
-
-            <input type="text" id="destination" placeholder="Destination">
-            <ul class="active" id="charactersList1">
-               <li>asdf</li>
-            </ul>
+            <div class="originContainer">
+               <input type="text" id="origin" placeholder="Origin" autocomplete="off">
+               <ul class="active" id="charactersList"></ul>
+            </div>
+            
+            <div class="destinationContainer">
+               <input type="text" id="destination" placeholder="Destination" autocomplete="off">
+               <ul class="active" id="charactersList1"></ul>
+            </div>
 
             <span><ion-icon name="paper-plane-outline"></ion-icon></span>
          </div>
 
          <div class="searchBar active" id="searchBar1">
-            <input type="text" id="airport" placeholder="Airport">
+            <div class="airportContainer">
+               <input type="text" id="airport" placeholder="Airport" autocomplete="off">
+               <ul class="active" id="charactersList2"></ul>
+            </div>
             <span><ion-icon name="paper-plane-outline"></ion-icon></span>
-
-            <ul class="active" id="charactersList2">
-            </ul>
          </div>
 
          <div class="boards" id="boards">
@@ -189,160 +182,163 @@
             </table>
          </div>
          <div class="boards1 active" id="boards1">
-            <h3 class="dep">Departure</h3>
-            <div class="leftBoard">
-               <table>
-                  <thead>
-                     <th>AIRLINE</th>
-                     <th>FLIGHT</th>
-                     <th>ORIGIN</th>
-                     <th>TIME</th>
-                     <th>STATUS</th>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                     <tr>
-                        <td>Indigo</td>
-                        <td>AB123</td>
-                        <td>DEL</td>
-                        <td>00:00</td>
-                        <td>24:00</td>
-                     </tr>
-                  </tbody>
-               </table>
+            <div class="boardHeading">
+               <h3 class="dep">Departure</h3>
+               <h3 class="arr">Arrival</h3>
             </div>
-         
-            <h3 class="arr">Arrival</h3>
-            <div class="rightBoard">
-               <table>
-                  <thead>
-                     <th>AIRLINE</th>
-                     <th>FLIGHT</th>
-                     <th>DESTINATION</th>
-                     <th>TIME</th>
-                     <th>STATUS</th>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                     <tr>
-                        <td>SpiceJet</td>
-                        <td>AB123</td>
-                        <td>VOMM</td>
-                        <td>24:00</td>
-                        <td>00:00</td>
-                     </tr>
-                  </tbody>
-               </table>
+            <div class="boardContainer">
+               <div class="leftBoard">
+                  <table>
+                     <thead>
+                        <th>AIRLINE</th>
+                        <th>FLIGHT</th>
+                        <th>ORIGIN</th>
+                        <th>TIME</th>
+                        <th>STATUS</th>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                        <tr>
+                           <td>Indigo</td>
+                           <td>AB123</td>
+                           <td>DEL</td>
+                           <td>00:00</td>
+                           <td>24:00</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="rightBoard">
+                  <table>
+                     <thead>
+                        <th>AIRLINE</th>
+                        <th>FLIGHT</th>
+                        <th>DESTINATION</th>
+                        <th>TIME</th>
+                        <th>STATUS</th>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                        <tr>
+                           <td>SpiceJet</td>
+                           <td>AB123</td>
+                           <td>VOMM</td>
+                           <td>24:00</td>
+                           <td>00:00</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
             </div>
          </div>
       </div>

@@ -103,6 +103,8 @@ function suggestions(e) {
   });
   // console.log(filteredCharacters);
   displayCharacters(filteredCharacters);
+  displayCharacters1(filteredCharacters);
+  displayCharacters2(filteredCharacters);
 }
 
 let hpCharacters = [];
