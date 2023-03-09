@@ -98,7 +98,7 @@ body {
    justify-content: center;
    transition: .3s all ease-in-out;
    cursor: pointer;
-   animation: shake 5s ease infinite;
+   animation: shake 3s ease infinite;
 }
 
 @keyframes shake {
@@ -107,7 +107,7 @@ body {
    }
 
    25% {
-      transform: translateY(10px);
+      transform: translateY(12px);
    }
 
    50% {
@@ -115,7 +115,7 @@ body {
    }
 
    75% {
-      transform: translateY(10px);
+      transform: translateY(12px);
    }
 
    100% {
@@ -331,35 +331,6 @@ body {
    transition: .5s all ease-in-out;
 }
 
-#title.active {
-   display: none;
-}
-#title1.active {
-   display: none;
-
-}
-
-#toggle.active {
-   display: none;
-}
-#toggle1.active {
-   display: none;
-}
-
-#searchBar.active {
-   display: none;
-}
-#searchBar1.active {
-   display: none;
-}
-
-#boards.active {
-   display: none;
-}
-#boards1.active {
-   display: none;
-}
-
 .container > #toggle {
    position: absolute;
    padding: 30px 15px 0 0;
@@ -504,7 +475,7 @@ body {
    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-.container .searchBar > span {
+.container .searchBar > a {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -518,7 +489,7 @@ body {
    cursor: pointer;
 }
 
-.container .searchBar > span > button {
+.container .searchBar > a > button {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -529,7 +500,7 @@ body {
    border: none;
 }
 
-.container .searchBar > span:hover {
+.container .searchBar > a:hover {
    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.692);
 }
 

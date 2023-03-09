@@ -37,153 +37,33 @@
    <section class="mainScreen">
       <div class="space">
          <div class="spaceContent">
-            <h1>Know The</h1>
+            <h3>Know Schedules</h3>
             <div class="line">
                <span class="lineSpan"><ion-icon name="airplane-sharp"></ion-icon></span>
                <div class="dash"></div>
                <span><ion-icon name="airplane-sharp"></ion-icon></span>
             </div>
-            <h1>Schedules</h1>
+            <h3>By Airport</h3>
             <a href="#dashboard"><ion-icon name="arrow-down-outline" id="flight"></ion-icon></a>
          </div>
       </div>
    </section>
    <section class="dashboardSection" id="dashboard">
       <div class="container">
-         <h1 id="title"><u>Flight Schedules</u></h1>
-         <h1 id="title1" class="active"><u>Airport Schedules</u></h1>
-
-         <a id="toggle" href="#dashboard"> <u>Airport Schedules</u> ▶ </a>
-         <a id="toggle1" class="active" href="#dashboard"> ◀  <u>Flight Schedules</u> </a>
-
-         <form action="flightSchedules" method="get">
-            <div class="searchBar" id="searchBar">
-               <div class="originContainer">
-                  <input type="text" name="origin" id="origin" placeholder="Origin" autocomplete="off">
-                  <ul id="charactersList"></ul>
-               </div>
-               
-               <div class="destinationContainer">
-                  <input type="text" name="destination" id="destination" placeholder="Destination" autocomplete="off">
-                  <ul id="charactersList1"></ul>
-               </div>
-               <span><button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button></span>
-            </div>
-         </form>
+         <h1 id="title1"><u>Airport Schedules</u></h1>
+         <a id="toggle1" href="./flightSchedules.html#dashboard"> ◀  <u>Flight Schedules</u> </a>
+         
          <form action="airportSchedules" method="get">
-            <div class="searchBar active" id="searchBar1">
+            <div class="searchBar" id="searchBar1">
                <div class="airportContainer">
                   <input type="text" name="airport" id="airport" placeholder="Airport" autocomplete="off">
                   <ul id="charactersList2"></ul>
                </div>
-               <span><button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button></span>
+               <a><button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button></a>
             </div>
          </form>
-         <div class="boards" id="boards">
-            <table>
-               <thead>
-                  <tr>
-                     <th>AIRLINE</th>
-                     <th>FLIGHT</th>
-                     <th>STATUS</th>
-                     <th>DEPARTURE</th>
-                     <th>ARRIVAL</th>
-                     <th>LINK</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td><img src="https://daisycon.io/images/airline/?width=100&height=20&iata=af" alt="logo"></td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td><img src="https://daisycon.io/images/airline/?width=100&height=20&iata=6e" alt="logo"></td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></th>
-                  </tr>
-                  <tr>
-                     <td><img src="https://daisycon.io/images/airline/?width=100&height=20&iata=ai" alt="logo"></td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></th>
-                  </tr>
-                  <tr>
-                     <td>UAE</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>Deccan</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>Kingfisher</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>AirAsia</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>SpiceJet</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>Indigo</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>Indigo</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-                  <tr>
-                     <td>Indigo</td>
-                     <td>AB123</td>
-                     <td>None</td>
-                     <td>DEL</td>
-                     <td>VOMM</td>
-                     <td><a href="#"><ion-icon name="log-out-outline"></ion-icon></a></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div class="boards1 active" id="boards1">
+         
+         <div class="boards1" id="boards1">
             <div class="boardHeading">
                <h3 class="dep">Departure</h3>
                <h3 class="arr">Arrival</h3>
@@ -348,6 +228,6 @@
 
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="schedules.js"></script>
+   <script src="./airportSchedules.js"></script>
 </body>
 </html>
