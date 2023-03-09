@@ -51,6 +51,11 @@ body {
    cursor: pointer;
 }
 
+.navigation .nav-contents > ul > li > a {
+   color:#fff;
+   text-decoration: none;
+}
+
 .navigation .nav-contents > ul > li:hover {
    border: 1px solid #000000;
    background: #000000;
