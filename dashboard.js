@@ -104,6 +104,8 @@ $(document).ready(function () {
         $.each(data, function (key, value) {
           if (
             value.name.search(expression) != -1 ||
+            value.country.search(expression) != -1 ||
+            value.city.search(expression) != -1 ||
             value.iata_code.search(expression) != -1
           ) {
             $("#charactersList").append(
@@ -140,6 +142,8 @@ $(document).ready(function () {
         $.each(data, function (key, value) {
           if (
             value.name.search(expression) != -1 ||
+            value.country.search(expression) != -1 ||
+            value.city.search(expression) != -1 ||
             value.iata_code.search(expression) != -1
           ) {
             $("#charactersList1").append(
@@ -177,11 +181,15 @@ $(document).ready(function () {
         $.each(data, function (key, value) {
           if (
             value.name.search(expression) != -1 ||
+            value.country.search(expression) != -1 ||
+            value.city.search(expression) != -1 ||
             value.iata_code.search(expression) != -1
           ) {
             $("#charactersList2").append(
-              '<li class="list-group-item characters">' + '<h3>' +
-                value.name + '</h3>' +
+              '<li class="list-group-item characters">' +
+                "<h3>" +
+                value.name +
+                "</h3>" +
                 '     <span class="text-muted">' +
                 value.iata_code +
                 "</span></li>"
